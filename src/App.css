@@ -1,38 +1,101 @@
+:root {
+  --first:#111111;
+  --second:#f6f6f6;
+  --third:#2f2f2f;
+  --fourth:#ffcb74;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
 .App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  background-color: var(--first);
+  border-radius: 10px;
   text-align: center;
+  border: 1px double var(--third);
+  color: var(--second);
+  box-shadow: 20px 30px 20px var(--first);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container h1 {
+  color: var(--fourth);
+  font-size: 2.5rem;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form label{
+  color: var(--second);
+  display: block;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form input[type="datetime-local"] {
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--third);
+  cursor: pointer;
+  text-transform: uppercase;
+  color: var(--second);
+  font-size: 1rem;
+}
+.form input[type="submit"] {
+  background-color: var(--fourth);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--first);
+  cursor: pointer;
+  margin: 10px auto;  
+  transition: all 0.3s ease;
+}
+.form input[type="submit"]:hover{
+  cursor: pointer;
+  outline: none;
+  background-color: var(--first);
+  color:  var(--fourth);
+  box-shadow: 0 0 10px var(--fourth);
+  transform: scale(1.05);
+  border: 0.5px groove var(--fourth);
+}
+
+.container .res{
+  color: var(--second);
+  font-size: 1.2rem;
+  margin-top: 20px;
+  width: 80%;
+  padding: 10px;
+  position: fixed;
+  height: 60px;
+}
+
+.res b{
+  color: var(--fourth);
 }
